@@ -526,7 +526,7 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-        <p>Pravin Mishra Portfolio v1.0 — Deployed on 13 Oct 2026 — By Ibtissem</p>
+        <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate">14 Oct 2026</span> — By Ibtissem</p>
       </div>
 
     </div>
@@ -534,6 +534,16 @@
 
 
 
-</body>
+  <script>
+    // Footer deploy date: format DD Mon YYYY
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, "0");
+    document.getElementById("deployDate").textContent =
+      day + " " + months[now.getMonth()] + " " + now.getFullYear();
 
+    // Copyright year
+    document.getElementById("year").textContent = now.getFullYear();
+  </script>
+</body>
 </html>
