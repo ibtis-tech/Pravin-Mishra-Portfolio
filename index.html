@@ -68,8 +68,8 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>
-        “Empowering thousands of students<br>
-        towards success.”
+        Start your DevOps Journey here<br>
+        <a href="https://dmi.pravinmishra.com/">Visit the DMI Website</a>
       </h1>
     </div>
 
@@ -526,7 +526,7 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-        <p>Pravin Mishra Portfolio v1.0 - Deployed on 24th July 2023 - By Pravin Mishra</p>
+        <p class="footer-version">Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate">14 Oct 2026</span> — By Ibtissem</p>
       </div>
 
     </div>
@@ -534,6 +534,16 @@
 
 
 
-</body>
+  <script>
+    // Footer deploy date: format DD Mon YYYY
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, "0");
+    document.getElementById("deployDate").textContent =
+      day + " " + months[now.getMonth()] + " " + now.getFullYear();
 
+    // Copyright year
+    document.getElementById("year").textContent = now.getFullYear();
+  </script>
+</body>
 </html>

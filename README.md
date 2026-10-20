@@ -40,3 +40,25 @@ Add this line (example):
 ```
 
 ✅ This proof must be visible in your browser screenshot submission.
+
+---
+
+## Day 2 — Dynamic Footer Date
+
+The website footer displays the current date in DD Mon YYYY format.
+
+JavaScript generates the date automatically using the `Date` object. The date is displayed in the `deployDate` HTML element.
+
+The copyright year is also updated automatically.
+
+Example: `14 Oct 2026`
+
+```javascript
+const now = new Date();
+const day = String(now.getDate()).padStart(2, "0");
+
+document.getElementById("deployDate").textContent =
+  day + " " + months[now.getMonth()] + " " + now.getFullYear();
+```
+
+Note: The date represents the current date when the page is viewed, not necessarily the last deployment date.
